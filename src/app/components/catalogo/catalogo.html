@@ -1,0 +1,20 @@
+<section class="p-12 box-border m-0 min-h-screen h-auto flex bg-linear-to-br to-indigo-600 from-indigo-300">
+    <div class="options w-72 clear-left mr-4 p-4 border-2 rounded-2xl h-fit bg-white">
+        <h1 class="text-center mb-4 font-bold">Filtros</h1>
+        <fieldset class="border-2 " name="Tipos">
+            <h1 class="border-b-black border-b-2 text-center pt-1 pb-1">Tipos</h1>
+            <ul class="pl-2 pr-2 pb-2 pt-0.5 ml-6">
+                <li><input class="mr-1.5" type="checkbox" [checked]="types.Ropa()" (change)="toggleType('Ropa', $event)">Ropa</li>
+                <li><input class="mr-1.5" type="checkbox" [checked]="types.Calzado()" (change)="toggleType('Calzado', $event)">Calzado</li>
+                <li><input class="mr-1.5" type="checkbox" [checked]="types.Abrigo()" (change)="toggleType('Abrigo', $event)">Abrigo</li>
+                <li><input class="mr-1.5" type="checkbox" [checked]="types.Informatica()" (change)="toggleType('Informatica', $event)">Informática</li>
+            </ul>
+            <button class="m-2 border-2 p-1 cursor-pointer" (click)="clearSelection()">Limpiar</button>
+        </fieldset>
+    </div>
+    <div class="shoppingitems border-2 p-4 w-9/12">
+        <input class="border-2 mb-4 p-1 w-full bg-white" type="search" [value]="searchTerm()" (input)="searchTerm.set($any($event.target).value)" placeholder="Buscar...">
+
+        <app-product-list [products]="filteredProducts()"></app-product-list>
+    </div>
+</section>

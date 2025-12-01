@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Camiseta básica",
+    "type": "Ropa",
+    "price": 15,
+    "image": "products/camiseta.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Pantalón vaquero",
+    "type": "Ropa",
+    "price": 35,
+    "image": "products/vaquero.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Zapatillas deportivas",
+    "type": "Calzado",
+    "price": 60,
+    "image": "products/zapatillas.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Camisa formal",
+    "type": "Ropa",
+    "price": 40,
+    "image": "products/camisa.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Sandalias",
+    "type": "Calzado",
+    "price": 25,
+    "image": "products/sandalias.png"
+  },
+  {
+    "id": 6,
+    "name": "Sudadera con capucha",
+    "type": "Ropa",
+    "price": 30,
+    "image": "products/sudadera.png"
+  },
+  {
+    "id": 7,
+    "name": "Botas de cuero",
+    "type": "Calzado",
+    "price": 85,
+    "image": "products/botas.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Falda corta",
+    "type": "Ropa",
+    "price": 28,
+    "image": "products/falda.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Zapatos",
+    "type": "Calzado",
+    "price": 95,
+    "image": "products/zapatos.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Chaqueta ligera",
+    "type": "Ropa",
+    "price": 55,
+    "image": "products/chaqueta.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Abrigo",
+    "type": "Abrigo",
+    "price": 120,
+    "image": "products/abrigo.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Portátil",
+    "type": "Informatica",
+    "price": 750,
+    "image": "products/portatil.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Guantes de invierno",
+    "type": "Ropa",
+    "price": 20,
+    "image": "products/guantes.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Auriculares inalámbricos",
+    "type": "Informatica",
+    "price": 120,
+    "image": "products/auriculares.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Bufanda",
+    "type": "Abrigo",
+    "price": 25,
+    "image": "products/bufanda.jpg"
+  }
+]

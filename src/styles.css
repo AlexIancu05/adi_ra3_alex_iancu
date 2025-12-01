@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+
+.star-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.star {
+  font-size: 48px;
+  line-height: 1;
+  cursor: pointer;
+  color: #9aa0a6;
+  user-select: none;
+}
+
+.star::before {
+  content: "☆";
+}
+
+.star-checkbox:checked + .star::before {
+  content: "★";
+  color: #f4b400;
+}

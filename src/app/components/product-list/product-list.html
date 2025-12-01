@@ -1,0 +1,22 @@
+<div class="grid grid-cols-3 gap-4">
+  @for (p of products; track p.id) {
+  <div class="border p-4 rounded hover:shadow-md transition bg-white">
+    <img [src]="p.image" class="w-full h-40 object-contain mb-2 rounded">
+    <div class="flex justify-between">
+      <div>
+        <h2 class="font-bold">{{ p.name }}</h2>
+        <p class="text-sm text-gray-600">{{ p.type }}</p>
+        <p class="mt-1 font-semibold">{{ p.price }} €</p>
+      </div>
+      <div class="text-center mb-2">
+        <input type="checkbox" [id]="'star-' + p.id" class="star-checkbox" [checked]="p.wishlisted" (change)="toggleWishlist(p)" />
+        <label [attr.for]="'star-' + p.id" class="star"></label>
+        <br>
+        <button class="border p-0.5 w-8 h-8 font-bold rounded-full cursor-pointer" (click)="removeFromCart(p)">-</button>
+        <input type="text" readonly class="border w-5 text-center ml-2 mr-2 cursor-auto" [value]="p.quantity">
+        <button class="border p-0.5 w-8 h-8 font-bold rounded-full cursor-pointer" (click)="addToCart(p)">+</button>
+      </div>
+    </div>
+  </div>
+  }
+</div>

@@ -66,6 +66,16 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "doc": {
+          "builder": "@compodoc/compodoc:compodoc",
+          "options": {
+            "tsconfig": "tsconfig.json",
+            "outputPath": "documentation",
+            "name": "Mi Proyecto Angular",
+            "theme": "material",
+            "coverageTest": 70
+          }
         }
       }
     }
