@@ -1,20 +1,65 @@
 <section class="p-12 box-border m-0 min-h-screen h-auto flex bg-linear-to-br to-indigo-600 from-indigo-300">
-    <div class="options w-72 clear-left mr-4 p-4 border-2 rounded-2xl h-fit bg-white">
-        <h1 class="text-center mb-4 font-bold">Filtros</h1>
-        <fieldset class="border-2 " name="Tipos">
-            <h1 class="border-b-black border-b-2 text-center pt-1 pb-1">Tipos</h1>
-            <ul class="pl-2 pr-2 pb-2 pt-0.5 ml-6">
-                <li><input class="mr-1.5" type="checkbox" [checked]="types.Ropa()" (change)="toggleType('Ropa', $event)">Ropa</li>
-                <li><input class="mr-1.5" type="checkbox" [checked]="types.Calzado()" (change)="toggleType('Calzado', $event)">Calzado</li>
-                <li><input class="mr-1.5" type="checkbox" [checked]="types.Abrigo()" (change)="toggleType('Abrigo', $event)">Abrigo</li>
-                <li><input class="mr-1.5" type="checkbox" [checked]="types.Informatica()" (change)="toggleType('Informatica', $event)">Informática</li>
+    <div class="options w-72 clear-left mr-4 p-4 border-2 rounded-2xl h-fit bg-white shadow-md">
+        <h1 class="text-center mb-4 font-bold text-xl">Filtros</h1>
+        
+        <fieldset class="border-2 rounded p-2" name="Tipos">
+            <legend class="sr-only">Filtro por Tipos</legend>
+            
+            <div aria-hidden="true" class="border-b-black border-b-2 text-center px-4 pt-1 pb-2 mb-2 font-semibold w-full">
+                Tipos
+            </div>
+            
+            <ul class="pl-2 pr-2 pb-2 pt-2 space-y-2">
+                <li>
+                    <label for="filtro-ropa" class="cursor-pointer flex items-center">
+                        <input id="filtro-ropa" class="mr-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none w-4 h-4" 
+                               type="checkbox" [checked]="types.Ropa()" (change)="toggleType('Ropa', $event)">
+                        Ropa
+                    </label>
+                </li>
+                <li>
+                    <label for="filtro-calzado" class="cursor-pointer flex items-center">
+                        <input id="filtro-calzado" class="mr-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none w-4 h-4" 
+                               type="checkbox" [checked]="types.Calzado()" (change)="toggleType('Calzado', $event)">
+                        Calzado
+                    </label>
+                </li>
+                <li>
+                    <label for="filtro-abrigo" class="cursor-pointer flex items-center">
+                        <input id="filtro-abrigo" class="mr-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none w-4 h-4" 
+                               type="checkbox" [checked]="types.Abrigo()" (change)="toggleType('Abrigo', $event)">
+                        Abrigo
+                    </label>
+                </li>
+                <li>
+                    <label for="filtro-informatica" class="cursor-pointer flex items-center">
+                        <input id="filtro-informatica" class="mr-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none w-4 h-4" 
+                               type="checkbox" [checked]="types.Informatica()" (change)="toggleType('Informatica', $event)">
+                        Informática
+                    </label>
+                </li>
             </ul>
-            <button class="m-2 border-2 p-1 cursor-pointer" (click)="clearSelection()">Limpiar</button>
+            
+            <div class="flex justify-center mt-2">
+                <button class="m-2 border-2 p-1.5 px-3 cursor-pointer rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors font-medium" 
+                        (click)="clearSelection()" 
+                        aria-label="Limpiar todos los filtros de categoría">
+                    Limpiar filtros
+                </button>
+            </div>
         </fieldset>
     </div>
-    <div class="shoppingitems border-2 p-4 w-9/12">
-        <input class="border-2 mb-4 p-1 w-full bg-white" type="search" [value]="searchTerm()" (input)="onSearch($event)" placeholder="Buscar...">
 
+    <div class="shoppingitems border-2 p-4 w-9/12 bg-white/50 backdrop-blur-sm rounded-xl">
+        <label for="buscador" class="sr-only">Buscar por nombre de producto</label>
+        
+        <input id="buscador" 
+               class="border-2 mb-4 p-2 w-full bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow" 
+               type="search" 
+               [value]="searchTerm()" 
+               (input)="onSearch($event)" 
+               placeholder="Buscar producto...">
+               
         <app-product-list [products]="filteredProducts()"></app-product-list>
     </div>
 </section>

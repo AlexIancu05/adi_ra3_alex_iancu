@@ -1,22 +1,43 @@
-<div class="grid grid-cols-3 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
   @for (p of products; track p.id) {
-  <div class="border p-4 rounded hover:shadow-md transition bg-white">
-    <img [src]="p.image" class="w-full h-40 object-contain mb-2 rounded">
-    <div class="flex justify-between">
+  <div class="border p-4 rounded-xl hover:shadow-lg transition-shadow bg-white flex flex-col h-full">
+    <img [src]="p.image" class="w-full h-40 object-contain mb-4 rounded" alt="{{ p.name }}">
+    
+    <div class="flex justify-between items-end mt-auto">
       <div>
-        <h2 class="font-bold">{{ p.name }}</h2>
-        <p class="text-sm text-gray-600">{{ p.type }}</p>
-        <p class="mt-1 font-semibold">{{ p.price }} €</p>
+        <h2 class="font-bold text-lg text-indigo-900">{{ p.name }}</h2>
+        <p class="text-sm text-gray-600 mb-1">{{ p.type }}</p>
+        <p class="font-bold text-xl text-gray-800">{{ p.price }} €</p>
       </div>
-      <div class="text-center mb-2">
-        <input type="checkbox" [id]="'star-' + p.id" class="star-checkbox" [checked]="p.wishlisted" (change)="toggleWishlist(p)" />
-        <label [attr.for]="'star-' + p.id" class="star"></label>
-        <br>
-        <button class="border p-0.5 w-8 h-8 font-bold rounded-full cursor-pointer" (click)="removeFromCart(p)">-</button>
-        <input type="text" readonly class="border w-5 text-center ml-2 mr-2 cursor-auto" [value]="p.quantity">
-        <button class="border p-0.5 w-8 h-8 font-bold rounded-full cursor-pointer" (click)="addToCart(p)">+</button>
+      
+      <div class="text-center">
+        <input type="checkbox" [id]="'star-' + p.id" class="star-checkbox sr-only peer" [checked]="p.wishlisted" (change)="toggleWishlist(p)" />
+        <label [attr.for]="'star-' + p.id" 
+               class="star cursor-pointer peer-focus:ring-2 peer-focus:ring-indigo-500 rounded inline-block mb-2" 
+               title="Añadir/Quitar de lista de deseos"
+               aria-label="Añadir {{ p.name }} a la lista de deseos"></label>
+        
+        <div class="flex items-center justify-center bg-gray-50 rounded-full p-1 border mt-1">
+          <button class="w-8 h-8 font-bold rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors cursor-pointer" 
+                  aria-label="Quitar una unidad de {{ p.name }}"
+                  (click)="removeFromCart(p)">-</button>
+          
+          <input type="text" readonly 
+                 class="w-6 text-center font-semibold bg-transparent focus:outline-none cursor-auto" 
+                 aria-label="Cantidad actual de {{ p.name }}"
+                 [value]="p.quantity">
+          
+          <button class="w-8 h-8 font-bold rounded-full hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors cursor-pointer" 
+                  aria-label="Añadir una unidad de {{ p.name }}"
+                  (click)="addToCart(p)">+</button>
+        </div>
       </div>
     </div>
+  </div>
+  } @empty {
+  <div class="col-span-1 md:col-span-2 lg:col-span-3 text-center p-12 bg-white border-2 border-dashed border-indigo-200 rounded-xl shadow-sm">
+    <p class="text-indigo-800 font-bold text-xl mb-2">No se encontraron productos.</p>
+    <p class="text-md text-gray-500">Prueba a usar otras palabras en el buscador o limpia los filtros de categorías.</p>
   </div>
   }
 </div>

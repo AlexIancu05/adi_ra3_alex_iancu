@@ -8,11 +8,12 @@ import { CartService } from '../../service/cart-service';
 import { ProductsDataService } from '../../service/products-data-service';
 // Interfaz que define la estructura de un producto
 import { Product } from '../product/product';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart',          // Nombre de la etiqueta HTML para usar este componente
   standalone: true,              // Es un componente standalone (no depende de NgModule)
-  imports: [CommonModule],       // Importa CommonModule para usar directivas comunes
+  imports: [CommonModule, RouterLink],       // Importa CommonModule para usar directivas comunes
   templateUrl: './carrito.html', // Plantilla HTML asociada
   styleUrl: './carrito.css',     // Estilos CSS asociados
 })

@@ -1,5 +1,5 @@
 <section class="flex flex-col items-center justify-center min-h-screen p-8 bg-linear-to-br from-indigo-500 to-indigo-300">
-    <h1 class="text-5xl font-bold mb-6 text-center">
+    <h1 class="text-5xl font-bold mb-6 text-center text-white">
         ¡Bienvenido!
     </h1>
 
@@ -7,24 +7,26 @@
         Este es el proyectito de Angular que he hecho, y esto una pequeña sección de inicio porque necesito un poco de humor (Ayuda)
     </p>
 
-    <a routerLink="catalogo" routerLinkActive="active"
-        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition cursor-pointer">
+    <a routerLink="/catalogo" 
+        routerLinkActive="active"
+        aria-label="Ir a la página del catálogo de productos"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition cursor-pointer focus:outline-none focus:ring-4 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-500 shadow-lg">
         Ir al catálogo
     </a>
 
     <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
-        <div class="p-6 border rounded-xl text-center bg-white">
-            <h2 class="text-xl font-bold mb-2">AVISO</h2>
+        <div class="p-6 border rounded-xl text-center bg-white shadow-md">
+            <h2 class="text-xl font-bold mb-2 text-indigo-900">AVISO</h2>
             <p class="text-gray-600 text-sm">Esto es un trabajo de clase, no una tienda real.</p>
         </div>
 
-        <div class="p-6 border rounded-xl text-center bg-white">
-            <h2 class="text-xl font-bold mb-2">Además</h2>
+        <div class="p-6 border rounded-xl text-center bg-white shadow-md">
+            <h2 class="text-xl font-bold mb-2 text-indigo-900">Además</h2>
             <p class="text-gray-600 text-sm">Se nota bastante eh, las cosas como son.</p>
         </div>
 
-        <div class="p-6 border rounded-xl text-center bg-white">
-            <h2 class="text-xl font-bold mb-2">Ten cuidado</h2>
+        <div class="p-6 border rounded-xl text-center bg-white shadow-md">
+            <h2 class="text-xl font-bold mb-2 text-indigo-900">Ten cuidado</h2>
             <p class="text-gray-600 text-sm">Solo porque ponga tienda no significa que tengas que entrar</p>
         </div>
     </div>

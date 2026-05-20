@@ -1,18 +1,47 @@
-<nav class="flex justify-between items-center bg-linear-to-bl from-cyan-700 to bg-cyan-500 text-white p-4 border-b-2 border-b-cyan-950">
+<nav class="sticky top-0 z-50 shadow-md flex justify-between items-center bg-linear-to-bl from-cyan-700 to-cyan-500 text-white p-4 border-b-2 border-b-cyan-950" aria-label="Navegación principal">
+    
     <div class="text-2xl font-bold">
-        <h1><a class="transition-colors duration-300 hover:text-amber-600 cursor-pointer" routerLink="" routerLinkActive="active">Tienda de cosas</a></h1>
+        <h1>
+            <a class="focus:outline-none focus:ring-2 focus:ring-white rounded px-2 transition-colors duration-300 hover:text-amber-600" 
+               routerLink="/" 
+               aria-label="Ir a la página principal de Tienda de cosas">
+                Tienda de cosas
+            </a>
+        </h1>
     </div>
-    <ul class="list-none flex gap-6 m-0">
-        <li><a class="text-white decoration-0 font-medium transition-colors duration-300 hover:text-amber-600 cursor-pointer" 
-                routerLink="" routerLinkActive="active">Inicio</a></li>
+    
+    <ul class="list-none flex gap-6 m-0 items-center">
+        <li>
+            <a class="text-white decoration-0 font-medium transition-colors duration-300 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1 block" 
+               routerLink="/" 
+               routerLinkActive="text-amber-600 font-bold" 
+               [routerLinkActiveOptions]="{exact: true}">
+               Inicio
+            </a>
+        </li>
 
-        <li><a class="text-white decoration-0 font-medium transition-colors duration-300 hover:text-amber-600 cursor-pointer"
-                routerLink="catalogo" routerLinkActive="active">Catálogo</a></li>
+        <li>
+            <a class="text-white decoration-0 font-medium transition-colors duration-300 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1 block"
+               routerLink="/catalogo" 
+               routerLinkActive="text-amber-600 font-bold">
+               Catálogo
+            </a>
+        </li>
 
-        <li><a class="text-white decoration-0 font-medium transition-colors duration-300 hover:text-amber-600 cursor-pointer"
-                routerLink="deseados" routerLinkActive="active">Lista de Deseados</a></li>
+        <li>
+            <a class="text-white decoration-0 font-medium transition-colors duration-300 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1 block"
+               routerLink="/deseados" 
+               routerLinkActive="text-amber-600 font-bold">
+               Lista de Deseados
+            </a>
+        </li>
 
-        <li><a class="text-white decoration-0 font-medium transition-colors duration-300 hover:text-amber-600 cursor-pointer"
-                routerLink="carrito" routerLinkActive="active">Carrito</a></li>
+        <li>
+            <a class="text-white decoration-0 font-medium transition-colors duration-300 hover:text-amber-600 focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1 block"
+               routerLink="/carrito" 
+               routerLinkActive="text-amber-600 font-bold">
+               Carrito
+            </a>
+        </li>
     </ul>
 </nav>

@@ -1,24 +1,48 @@
-<footer class="footer">
-    <div class="footer-container">
+<!-- Se mantienen tus clases CSS originales por si las tienes en el footer.css, pero añadimos las de accesibilidad -->
+<footer class="footer bg-gray-800 text-white pt-8 pb-6 mt-auto">
+    <div class="footer-container max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        
         <div class="footer-section">
-            <h3>Tecnologias principales</h3>
-            <ul class="social-links">
-                <li><p>Angular</p></li>
-                <li><p>Tailwind</p></li>
+            <h3 class="text-xl font-bold mb-4 text-indigo-300">Tecnologías principales</h3>
+            <!-- Usabilidad y Accesibilidad: Convertir textos en enlaces para que se pueda interactuar con el teclado -->
+            <ul class="social-links space-y-2">
+                <li>
+                    <a href="https://angular.dev/" target="_blank" rel="noopener noreferrer" 
+                       class="hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded px-1 transition-colors" 
+                       aria-label="Visitar la web oficial de Angular (se abre en una pestaña nueva)">
+                        Angular
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" 
+                       class="hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded px-1 transition-colors" 
+                       aria-label="Visitar la web oficial de Tailwind CSS (se abre en una pestaña nueva)">
+                        Tailwind
+                    </a>
+                </li>
             </ul>
         </div>
+        
         <div class="footer-section">
-            <h3>Mis datos</h3>
-            <ul>
-                <li><p>Nombre: Alex Iancu</p></li>
-                <li><p>Instituto: IES El cañaveral</p></li>
-                <li><p>Curso: 2 DAM</p></li>
+            <h3 class="text-xl font-bold mb-4 text-indigo-300">Mis datos</h3>
+            <ul class="space-y-2">
+                <li>Nombre: Alex Iancu</li>
+                <li>Instituto: IES El Cañaveral</li>
+                <li>Curso: 2º DAM</li>
             </ul>
         </div>
+        
         <div class="footer-section contact-info">
-            <h3>Contacto</h3>
-            <p>Teléfono: Que te lo has creido</p>
-            <p>Email: iiancu@educa.madrid.org</p>
+            <h3 class="text-xl font-bold mb-4 text-indigo-300">Contacto</h3>
+            <p class="mb-2">Teléfono: Que te lo has creído</p>
+            <p>Email: 
+                <a href="mailto:iiancu@educa.madrid.org" 
+                   class="text-indigo-300 hover:text-white underline focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded px-1 transition-colors" 
+                   aria-label="Enviar un correo a Alex Iancu">
+                    iiancu@educa.madrid.org
+                </a>
+            </p>
         </div>
+        
     </div>
 </footer>

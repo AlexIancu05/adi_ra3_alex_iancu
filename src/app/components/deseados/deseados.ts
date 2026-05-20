@@ -8,10 +8,11 @@ import { WishlistService } from '../../service/wishlist-service';
 import { ProductsDataService } from '../../service/products-data-service';
 // Servicio que gestiona el carrito
 import { CartService } from '../../service/cart-service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-deseados',          // Nombre de la etiqueta HTML para usar este componente
-  imports: [ ],                      // No importa otros componentes standalone aquí
+  imports: [RouterLink],                      // No importa otros componentes standalone aquí
   templateUrl: './deseados.html',    // Plantilla HTML asociada
   styleUrl: './deseados.css',        // Estilos CSS asociados
 })
