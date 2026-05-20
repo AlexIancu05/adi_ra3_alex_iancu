@@ -95,4 +95,14 @@ export class Catalogo {
   clearSelection() {
     Object.values(this.types).forEach(t => t.set(false));
   }
+
+  onSearch(event: Event) {
+    const value = (event.target as HTMLInputElement).value
+
+    if (value.length > 2) {
+      this.searchTerm.set(value)
+    } else {
+      this.searchTerm.set("")
+    }
+  }
 }

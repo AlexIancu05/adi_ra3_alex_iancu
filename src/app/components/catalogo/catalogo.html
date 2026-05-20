@@ -13,7 +13,7 @@
         </fieldset>
     </div>
     <div class="shoppingitems border-2 p-4 w-9/12">
-        <input class="border-2 mb-4 p-1 w-full bg-white" type="search" [value]="searchTerm()" (input)="searchTerm.set($any($event.target).value)" placeholder="Buscar...">
+        <input class="border-2 mb-4 p-1 w-full bg-white" type="search" [value]="searchTerm()" (input)="onSearch($event)" placeholder="Buscar...">
 
         <app-product-list [products]="filteredProducts()"></app-product-list>
     </div>
