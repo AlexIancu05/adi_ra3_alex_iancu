@@ -41,6 +41,7 @@
     "@angular/build": "^21.0.0",
     "@angular/cli": "^21.0.0",
     "@angular/compiler-cli": "^21.0.0",
+    "baseline-browser-mapping": "^2.10.31",
     "jsdom": "^27.1.0",
     "karma-coverage": "^2.2.1",
     "typescript": "~5.9.2",
